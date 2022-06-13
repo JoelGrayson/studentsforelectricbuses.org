@@ -1,0 +1,30 @@
+.container
+    position: relative
+    height: 80px
+    width: 80px
+    margin-left: 1rem
+
+.entire, .outer, .inner
+    position: absolute
+    top: 0
+    left: 0
+
+.entire //on top, but hidden (so when open image in new tab, it shows)
+    z-index: 1
+    opacity: 0
+
+.outer
+    animation-name: rotating
+    animation-duration: 5s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    
+
+
+// .inner
+    
+@keyframes rotating
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(360deg)

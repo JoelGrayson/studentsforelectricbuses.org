@@ -1,0 +1,37 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(0), color-stop(#96d2ab), to(#abefc3));
+  background-image: linear-gradient(0, #96d2ab, #abefc3);
+  border-bottom: 1px solid #8f8f8f;
+}
+
+.header nav button {
+  background-color: #d2f0d5;
+}
+
+.header nav ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 1rem;
+  gap: .2rem;
+}
+
+.header nav li {
+  list-style-type: none;
+}
+/*# sourceMappingURL=header.module.css.map */
