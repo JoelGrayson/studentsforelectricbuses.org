@@ -17,6 +17,19 @@
 }
 
 .outer {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.rotatingOuter {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-animation-name: rotating;
           animation-name: rotating;
   -webkit-animation-duration: 5s;
