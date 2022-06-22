@@ -20,7 +20,7 @@ a {
     box-sizing: border-box;
 }
 
-/* Headers */
+/* Defaults */
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 h1 { font-size: 36px; }
 h2 { font-size: 28px; }
@@ -29,6 +29,12 @@ h4 { font-size: 20px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }
 
+ul:not(.unstyled) {
+    padding-left: 2rem;
+}
+ul:not(.unstyled) li {
+    list-style-type: disc;
+}
 /* </> */
 
 /* UCJG.v2.css */

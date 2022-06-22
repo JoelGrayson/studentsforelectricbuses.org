@@ -1,11 +1,36 @@
-import Header from '../components/Header';
 import Page from '../components/PageContainer';
+import styles from '../styles/members.module.css';
+import Link from 'next/link';
+import MemberSchool from '../components/MemberSchool';
+
+function m(name, joinYear='Unknown') { //member struct
+    return {name, joinYear};
+}
 
 export default function Members() {
     return (<>
-        <Page>
+        <Page center>
             <h2>Members</h2>
-            <table>
+            <br/>
+            <div className={styles.container}>
+                <div className={styles.board}>
+                    <div>President — </div>
+                    <div className={`${styles.block} ${styles.blockRed}`}>Board</div>
+                </div>
+                <div className={styles.schools}>
+                    {/* Schools */}
+                    <MemberSchool name="Riverdale" fullName="Riverdale Country School" 
+                        representative
+                        members={[
+                            m('Joel Grayson', '6/2021'),
+                            m('Theo Aborn', '5/2022'),
+                            m('Talia Mamaysky', '11/2021'),
+                            m('Riley Wittman', '11/2021')
+                        ]}
+                    />
+                </div>
+            </div>
+            {/* <table>
                 <thead>
                     <tr>
                         <th>Riverdale Country School</th>
@@ -28,9 +53,11 @@ export default function Members() {
                         <td>Talia Mamaysky</td>
                     </tr>
                 </tbody>
-            </table>
+            </table> */}
             <br/>
-            <div>Want to become a member? <button className="btn-blue">Join</button>.</div>
+            <div>Want to become a member?&nbsp;&nbsp;
+                <Link href="/join"><a><button className="btn-blue">Join</button></a></Link>
+            </div>
         </Page>
     </>);
 }
