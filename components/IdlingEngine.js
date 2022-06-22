@@ -49,7 +49,6 @@ export default function IdlingEngine() {
             let t=new Date().getTime();
     
             if (t-tSinceCircle>(freq*Math.random()*2)) { //±200
-                console.log('new')
                 tSinceCircle=t;
                 circs.push(new FumeCircle());
             }

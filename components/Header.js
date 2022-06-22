@@ -13,7 +13,7 @@ export default function Header({title, children}) { //takes in parameters for <H
                 :
                 <title>Students for Electric Buses</title>
             }
-            <link rel="shortcut icon" href="/images/SEB Logo.png" />
+            <link rel="icon" href="/images/favicon.ico" type='image/x-icon' />
             {children}
         </Head>
 
@@ -24,7 +24,8 @@ export default function Header({title, children}) { //takes in parameters for <H
             <nav>
                 <ul>
                     <Link href="/"><li><button>Home</button></li></Link>
-                    <Link href="/about"><li><button>About</button></li></Link>
+                    <Link href="/members"><li><button>Members</button></li></Link>
+                    <Link href="/join"><li><button>Join</button></li></Link>
                     <Link href="/contact"><li><button>Contact</button></li></Link>
                 </ul>
             </nav>

@@ -12,7 +12,7 @@ export default function Logo() {
         >
             <img
                 className={styles.entire}
-                src="/images/SEB Logo.png" alt="Logo" height='80px' width='80px'
+                src="/images/Students for Electric Buses Logo.png" alt="Logo" height='80px' width='80px'
             />
             <img alt="Outer logo" height='80px' width='80px'
                 className={styles.inner}
