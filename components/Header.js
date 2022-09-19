@@ -24,7 +24,7 @@ export default function Header({title, children}) { //takes in parameters for <H
             <nav>
                 <ul>
                     <Link href="/"><li><button>Home</button></li></Link>
-                    <Link href="/members"><li><button>Members</button></li></Link>
+                    {/* <Link href="/members"><li><button>Members</button></li></Link> */}
                     <Link href="/join"><li><button>Join</button></li></Link>
                     <Link href="/contact"><li><button>Contact</button></li></Link>
                 </ul>

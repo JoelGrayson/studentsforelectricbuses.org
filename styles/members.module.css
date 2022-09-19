@@ -7,6 +7,27 @@
           align-items: center;
 }
 
+.container .schools {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 1000px) {
+  .container .schools {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .container .schools {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
 .block {
   @apply px-8 py-5 {}  border: 2px solid gray;
   border-radius: .8rem;
@@ -23,6 +44,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
 }
 
 .blockBlue {

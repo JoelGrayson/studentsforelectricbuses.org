@@ -19,13 +19,37 @@ export default function Members() {
                 </div>
                 <div className={styles.schools}>
                     {/* Schools */}
-                    <MemberSchool name="Riverdale" fullName="Riverdale Country School" 
-                        representative
+                    <MemberSchool name="Riverdale" fullName="Riverdale Country School"
+                        // representative
                         members={[
                             m('Joel Grayson', '6/2021'),
                             m('Theo Aborn', '5/2022'),
                             m('Talia Mamaysky', '11/2021'),
                             m('Riley Wittman', '11/2021')
+                        ]}
+                    />
+                    <MemberSchool name="Fieldston" fullName="Ethical Culture Fieldston School"
+                        // representative
+                        members={[
+                            m('Bri Bernard', '3/2021'),
+                        ]}
+                    />
+                    <MemberSchool name="Horace Mann" fullName="Horace Mann School"
+                        // representative
+                        members={[
+                            m('wya', '3/2021'),
+                        ]}
+                    />
+                    <MemberSchool name="Bergen County Academies" fullName="Bergen County Academies"
+                        // representative
+                        members={[
+                            m('Allison Ore', '3/2021'),
+                        ]}
+                    />
+                    <MemberSchool name="Packer Collegiate" fullName="Packer Collegiate"
+                        // representative
+                        members={[
+                            m('Rebecca Zimmerman', '11/2021'),
                         ]}
                     />
                 </div>

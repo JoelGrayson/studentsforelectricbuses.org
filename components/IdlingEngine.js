@@ -63,23 +63,24 @@ export default function IdlingEngine() {
 
 
     return (<div style={{
-        position: 'relative'
+        display: 'block',
+        position: 'relative',
+        width: 500,
+        height: 500
     }}>
         {/* Diesel Bus */}
         <img src="/images/idling.png" id="idling" alt="Idling" style={{
             position: 'absolute',
             top: 0,
             left: 0,
+            zIndex: -1
         }} ref={imageRef}/>
         {/* Idling Canvas */}
-        <div style={{display: 'flex', position: 'absolute'}}>
-            <canvas id="fumes" width="500px" height="300px" ref={fumesRef}></canvas>
-            <div>
-                <h2>Environment &amp; Health</h2>
-                <p>
-                    Noxious fumes are bad for children&apos;s developing lungs.
-                </p>
-            </div>
-        </div>
+        <canvas id="fumes" width="500px" height="300px" ref={fumesRef} style={{
+            // position: 'absolute',
+            // top: 0,
+            // left: 0,
+            // zIndex: 2
+        }} />
     </div>);
 }
