@@ -15,13 +15,11 @@ export default async function handler(req, res) {
     await client.connect();
 
     try {
-        const query=`
-        INSERT INTO contact_form (date_submitted, name, email, message)
-        VALUES
-            ('${date2Timestamp(new Date())}', '${name}', '${email}', '${message}');
-        `;
-        console.log(query);
-        const queryRes=await client.query(query);
+        const queryRes=await client.query(`
+            INSERT INTO contact_form (date_submitted, name, email, message)
+            VALUES
+                ('${date2Timestamp(new Date())}', '${name}', '${email}', '${message}');
+        `);
 
         res.status(200).json({
             message: `Added ${name} with message "${message}"`,
