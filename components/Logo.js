@@ -1,27 +1,37 @@
-import { useState } from 'react';
-import styles from '../styles/logo.module.css';
+import { useState, useEffect } from 'react';
+import styles from '../styles/logo/logo.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Logo() {
-    const [rotating, setRotating] = useState(true);
+    const [hovering, setHovering]=useState(false);
+    const [deg, setDeg]=useState(0);
 
+    useEffect(()=>{ //rotating except when onHover
+        const id=setInterval(()=>{
+            if (!hovering)
+                setDeg(deg=>deg+0.5)
+            else
+                setDeg(deg=>deg)
+        }, 5);
+        return _=>clearInterval(id);
+    }, [hovering]);
+    
     return (<Link href='/'><a>
         <div className={styles.container}
-            onMouseEnter={_=>setRotating(false)}
-            onMouseLeave={_=>setRotating(true)}
+            onMouseEnter={_=>setHovering(true)}
+            onMouseLeave={_=>setHovering(false)}
         >
-            <img
-                className={styles.entire}
-                src="/images/Students for Electric Buses Logo.png" alt="Logo" height='80px' width='80px'
-            />
-            <img alt="Outer logo" height='80px' width='80px'
-                className={styles.inner}
-                src="/images/rotatable/inner.png"
-            />
-            <img alt="Inner logo" height='80px' width='80px'
-                className={rotating ? styles.rotatingOuter : styles.outer}
-                src="/images/rotatable/outer.png"
-            />
+            <div className={styles.entire}>
+                <Image src="/images/Students for Electric Buses Logo.png" alt="Logo" height='80px' width='80px' />
+            </div>
+            <div className={styles.inner}>
+                <Image alt="Outer logo" height='80px' width='80px' src="/images/rotatable/inner.png" />
+            </div>
+            <div className={styles.outer} style={{transform: `rotate(${deg}deg)`}}>
+                <Image alt="Inner logo" height='80px' width='80px' src="/images/rotatable/outer.png" />
+            </div>
         </div>
     </a></Link>);
+
 }

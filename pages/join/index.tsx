@@ -11,6 +11,7 @@ import React, { useState } from 'react';
 import Page from "../../components/PageContainer";
 import onFormSubmit from './onFormSubmit';
 import styles from '../../styles/form/form.module.css';
+import styled from "@emotion/styled";
 
 export default function Join() {
     const [content, setContent]=useState<String>('form');
@@ -56,7 +57,7 @@ export default function Join() {
                 <button className="btn-blue">Join</button>
             </form>)
             :
-            (<div>{content.split('\n').map(line=><p>{line} <br/></p>)}</div>) //Newline processing: \n → <p>
+            (<div>{content.split('\n').map(line=><p key={`${line}-${Math.random()}`}>{line} <br/></p>)}</div>) //Newline processing: \n → <p>
         }
     </Page>);
 }
