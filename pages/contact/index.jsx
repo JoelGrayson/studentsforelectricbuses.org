@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Page from '../../components/PageContainer';
 import styles from '../../styles/contact/contact.module.css';
+import styles from '../../styles/form input/index.module.css';
 import onFormSubmitted from './onFormSubmitted';
 import { Send } from 'react-feather';
 

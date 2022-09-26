@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+}
 
-const redirects=require('./redirect/main');
-
-module.exports={ //next configuration
-    reactStrictMode: true,
-    redirects
-};
+module.exports = nextConfig
