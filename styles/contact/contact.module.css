@@ -2,19 +2,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form div label {
   display: inline-block;
   width: 60px;
-}
-
-.form input, .form textarea {
-  border: 1px solid gray;
 }
 
 .form input, .form textarea {
