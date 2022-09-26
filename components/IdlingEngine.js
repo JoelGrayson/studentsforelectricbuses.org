@@ -1,29 +1,30 @@
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
+
+// Config
+const START_LOC=[206, 168];
+const SPEED=[1.8, .9];
+const FREQ=300; //ms to spawn circles
 
 export default function IdlingEngine() {
     const fumesRef=useRef(null);
-    const imageRef=useRef(null);
-
-    useEffect(() => {
+    
+    useEffect(()=>{
         const canvas=fumesRef.current;
         const c=canvas.getContext("2d"); //context
-        let tSinceCircle=new Date().getTime();
-    
-        const startLoc=[206, 168];
-        const speed=[1.8, .9];
-        const freq=300; //ms to spawn circles
+        let tSinceCircle=Date.now();
     
         class FumeCircle {
             constructor() {
-                this.x=startLoc[0];
-                this.y=startLoc[1];
+                this.x=START_LOC[0];
+                this.y=START_LOC[1];
                 this.r=0;
                 this.render();
                 this.opacity=1;
             }
             update() {
-                this.x+=speed[0]*(Math.random())*2;
-                this.y+=speed[1]*(Math.random())*2;
+                this.x+=SPEED[0]*(Math.random())*2;
+                this.y+=SPEED[1]*(Math.random())*2;
                 this.opacity-=0.01;
                 this.render();
                 this.r+=0.35;
@@ -44,12 +45,9 @@ export default function IdlingEngine() {
         function animate() {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, innerWidth, innerHeight); //clear the frame
-            // c.drawImage(imageRef.current, 10, 10); //idling bus image
             
-            let t=new Date().getTime();
-    
-            if (t-tSinceCircle>(freq*Math.random()*2)) { //±200
-                tSinceCircle=t;
+            if (Date.now()-tSinceCircle>(FREQ*Math.random()*2)) { //±200
+                tSinceCircle=Date.now();
                 circs.push(new FumeCircle());
             }
             
@@ -69,18 +67,12 @@ export default function IdlingEngine() {
         height: 500
     }}>
         {/* Diesel Bus */}
-        <img src="/images/idling.png" id="idling" alt="Idling" style={{
+        <Image width={300} height={200} src="/images/idling.png" id="idling" alt="Idling" />
+        {/* Idling Canvas */}
+        <canvas id="fumes" width="500px" height="300px" ref={fumesRef} style={{
             position: 'absolute',
             top: 0,
             left: 0,
-            zIndex: -1
-        }} ref={imageRef}/>
-        {/* Idling Canvas */}
-        <canvas id="fumes" width="500px" height="300px" ref={fumesRef} style={{
-            // position: 'absolute',
-            // top: 0,
-            // left: 0,
-            // zIndex: 2
         }} />
     </div>);
 }
