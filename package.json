@@ -16,13 +16,15 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.8.5",
+    "@sendgrid/mail": "^7.7.0",
     "child_process": "^1.0.2",
     "google-spreadsheet": "^3.3.0",
     "next": "12.1.6",
     "pg": "^8.8.0",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "twilio": "^3.82.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

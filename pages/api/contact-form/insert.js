@@ -1,10 +1,13 @@
 import { Client } from 'pg';
 import date2Timestamp from '../../../helpers/date2TimeStamp';
+import notifyJoel from '../../../helpers/notifyJoel';
 
 export default async function handler(req, res) {
     const {name, email, message}=req.body;
     console.log(req.body);
 
+    notifyJoel({name, email, message}); //notify Joel of contact form submission
+    
     const client=new Client({
         host: process.env.PG_HOST,
         user: process.env.PG_USER,
