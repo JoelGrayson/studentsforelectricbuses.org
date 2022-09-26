@@ -1,0 +1,33 @@
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form select, .form input, .form textarea {
+  border: 1px solid #222;
+  background-color: #dde5ff;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.8rem;
+}
+
+.form input:invalid, .form textarea:invalid {
+  background-color: #fde2f0;
+}
+
+.form input:hover, .form textarea:hover {
+  background-color: #c4c9f2;
+}
+
+.form input:focus, .form textarea:focus {
+  background-color: #d4e0fd;
+}
+/*# sourceMappingURL=form.module.css.map */

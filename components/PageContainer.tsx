@@ -8,7 +8,14 @@
 
 import Header from './Header';
 
-export default function PageContainer(props) {
+export default function PageContainer(props: {
+    noheader?: boolean;
+    title?: String;
+    children: any;
+    
+    nomargin?: boolean;
+    center?: boolean;
+}) {
     return (<>
         {!('noheader' in props) && <Header title={props.title}/> /*include Header unless noheader*/ }
         <main className={getMainClassName(props)}>
@@ -17,8 +24,11 @@ export default function PageContainer(props) {
     </>);
 }
 
-function getMainClassName(props) {
-    let classes=[];
+function getMainClassName(props: {
+    nomargin?: boolean;
+    center?: boolean;
+}) {
+    const classes=[];
     if (!('nomargin' in props))
         classes.push('max-w-3xl w-[80%] mx-auto mt-9');
 

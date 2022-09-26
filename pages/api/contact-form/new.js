@@ -4,10 +4,18 @@ import notifyJoel from '../../../helpers/notifyJoel';
 
 export default async function handler(req, res) {
     const {name, email, message}=req.body;
-    console.log(req.body);
 
-    notifyJoel({name, email, message}); //notify Joel of contact form submission
-    
+    notifyJoel({ //notify Joel of contact form submission
+        email: {
+            subject: 'New SEB Contact Form Submission',
+            replyTo: email,
+            body: `${name} <${email}> wrote:\n${message}`
+        },
+        text: `---New SEB Contact Form Submission---\n`
+        +`${name} <${email}> wrote:\n`
+        +`${message}`
+    });
+
     const client=new Client({
         host: process.env.PG_HOST,
         user: process.env.PG_USER,

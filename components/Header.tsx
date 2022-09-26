@@ -3,7 +3,7 @@ import styles from '../styles/header.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Header({title, children}) { //takes in parameters for <Head>
+export default function Header({title, children}: {title?: String, children?: any}) { //takes in parameters for <Head>
     return (<>
         <Head> {/* Default head options */}
             {
@@ -18,9 +18,7 @@ export default function Header({title, children}) { //takes in parameters for <H
         </Head>
 
         <header className={styles.header}>
-            <Link href="/">
-                <Logo/>
-            </Link>
+            <Logo/>
             <nav>
                 <ul>
                     <Link href="/"><li><button>Home</button></li></Link>

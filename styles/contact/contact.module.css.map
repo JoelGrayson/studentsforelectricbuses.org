@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,GAAG;EACR,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;CAKO;;AAT9B,AAOQ,KAPH,CAMD,GAAG,CACC,KAAK,CAAC;EACF,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,IAAI;CAAG",
-    "sources": [
-        "contact.module.sass"
-    ],
-    "names": [],
-    "file": "contact.module.css"
-}

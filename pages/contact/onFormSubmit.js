@@ -1,4 +1,4 @@
-export default function onFormSubmitted(setContacted) {
+export default function onFormSubmit(setContacted) {
     return e=>{
         e.preventDefault();
     
@@ -7,7 +7,7 @@ export default function onFormSubmitted(setContacted) {
         const message=e.target[2].value;
     
         // Add to database
-        fetch('/api/contact-form/insert', {
+        fetch('/api/contact-form/new', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
