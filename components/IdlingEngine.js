@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
+import styles from '../styles/home/home.module.css';
 
 // Config
 const START_LOC=[206, 168];
@@ -44,7 +45,7 @@ export default function IdlingEngine() {
         
         function animate() {
             requestAnimationFrame(animate);
-            c.clearRect(0, 0, innerWidth, innerHeight); //clear the frame
+            c.clearRect(0, 0, innerWidth+200, innerHeight+200); //clear the frame
             
             if (Date.now()-tSinceCircle>(FREQ*Math.random()*2)) { //±200
                 tSinceCircle=Date.now();
@@ -63,16 +64,12 @@ export default function IdlingEngine() {
     return (<div style={{
         display: 'block',
         position: 'relative',
-        width: 500,
-        height: 500
+        maxWidth: 500,
+        maxHeight: 500,
     }}>
         {/* Diesel Bus */}
         <Image width={300} height={200} src="/images/idling.png" id="idling" alt="Idling" />
         {/* Idling Canvas */}
-        <canvas id="fumes" width="500px" height="300px" ref={fumesRef} style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-        }} />
+        <canvas width="500px" height="300px" ref={fumesRef} className={styles['idling-canvas']} />
     </div>);
 }

@@ -1,5 +1,5 @@
 import Logo from './Logo';
-import styles from '../styles/header.module.css';
+import styles from '../styles/header/header.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ export default function Header({title, children}: {title?: String, children?: an
                 :
                 <title>Students for Electric Buses</title>
             }
-            <link rel="icon" href="/images/favicon.ico" type='image/x-icon' />
+            <link rel="icon" href="/favicon.ico" type='image/x-icon' />
             {children}
         </Head>
 

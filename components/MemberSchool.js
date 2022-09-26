@@ -1,4 +1,4 @@
-import styles from '../styles/members.module.css';
+import styles from '../styles/members/members.module.css';
 import Tooltip from '@mui/material/Tooltip'
 
 export default function MemberSchool({name, fullName, representative, members}) {

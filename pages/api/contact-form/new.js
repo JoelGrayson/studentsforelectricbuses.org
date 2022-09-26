@@ -1,5 +1,5 @@
 import { Client } from 'pg';
-import date2Timestamp from '../../../helpers/date2TimeStamp';
+import date2Timestamp from '../../../helpers/date2Timestamp';
 import notifyJoel from '../../../helpers/notifyJoel';
 
 export default async function handler(req, res) {

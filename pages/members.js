@@ -1,5 +1,5 @@
 import Page from '../components/PageContainer';
-import styles from '../styles/members.module.css';
+import styles from '../styles/members/members.module.css';
 import Link from 'next/link';
 import MemberSchool from '../components/MemberSchool';
 

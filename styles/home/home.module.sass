@@ -1,0 +1,58 @@
+.main
+    section
+        padding-bottom: 30px
+        line-height: 300%
+
+    section div, section p
+        padding-top: 15px
+        padding-bottom: 15px
+
+
+.environment
+    // min-height: 200px
+
+
+.health
+    min-height: 290px
+
+.health__idling-engine-container
+    display: flex
+    position: absolute
+
+.health__description
+    margin-left: 330px
+
+.idling-canvas
+    position: absolute
+    top: 26px
+    // left: 10px
+    right: -110px
+    width: 500px
+    height: 300px
+
+@media (max-width: 580px) //prevent overflow on mobile
+    .health
+        width: 80vw
+    .idling-canvas
+        position: absolute
+        top: 50%
+        left: 10%
+        width: calc(80% - 30px)
+        height: 48%
+    
+
+@media (max-width: 750px) //change health image & text orientation
+    .health__description
+        margin-top: 230px
+        margin-left: 0
+    .health
+        padding-bottom: 0 !important
+
+
+
+.savings
+
+
+
+    
+
