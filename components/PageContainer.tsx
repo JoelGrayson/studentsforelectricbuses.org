@@ -3,7 +3,6 @@
 * <Page noheader>
 * <Page nomargin> //everything in top left like default HTML
 * <Page center> //aligns to center
-
 */
 
 import Header from './Header';

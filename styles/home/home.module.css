@@ -1,11 +1,19 @@
 .main section {
   padding-bottom: 30px;
-  line-height: 300%;
+  line-height: 230%;
 }
 
-.main section div, .main section p {
+.main section > div div, .main section > div p {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.plus-bullet-list {
+  list-style-image: url("/images/plus-bullet.png");
+}
+
+.plus-bullet-list li {
+  padding-bottom: 6px;
 }
 
 .health {

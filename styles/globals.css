@@ -35,6 +35,18 @@ ul:not(.unstyled) {
 ul:not(.unstyled) li {
     list-style-type: disc;
 }
+/* Link */
+a {
+    cursor: pointer;
+}
+a:not(.unstyled) {
+    color: #0000e1;
+    text-decoration: underline;
+}
+a:not(.unstyled):hover {
+    color: #fa00f2;
+}
+
 /* </> */
 
 /* UCJG.v2.css */
