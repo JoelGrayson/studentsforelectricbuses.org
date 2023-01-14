@@ -5,7 +5,7 @@ import notifyJoel from '../../../helpers/notifyJoel';
 export default async function handler(req, res) {
     const {name, email, message}=req.body;
 
-    notifyJoel({ //notify Joel of contact form submission
+    await notifyJoel({ //notify Joel of contact form submission
         email: {
             subject: 'New SEB Contact Form Submission',
             replyTo: email,

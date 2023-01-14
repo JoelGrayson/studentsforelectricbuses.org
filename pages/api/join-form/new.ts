@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     +`#Buses: ${numBuses}\n`
     +`Why They Want to Join:\n${whyYouWantToJoin}`;
 
-    notifyJoel({ //notify Joel of contact form submission
+    await notifyJoel({ //notify Joel of contact form submission
         email: {
             subject: 'New SEB Join Form Submission',
             replyTo: email,

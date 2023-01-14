@@ -10,23 +10,28 @@ export default function notifyJoel(args: { //notify Joel of contact form submiss
         body: String;
     };
 }) {
-    // email Joel
-    if (args.email) {
-        emailClient.send({
-            to: process.env.MY_EMAIL_ADDR,
-            from: 'bot@joelgrayson.com',
-            subject: args.email.subject,
-            text: args.email.body,
-            replyTo: args.email.replyTo
-        });
-    }
-
-    // text Joel
-    if (args.text) {
-        textClient.messages.create({
-            to: process.env.MY_PHONE_NUMBER,
-            from: process.env.TWILIO_PHONE_NUMBER,
-            body: args.text,
-        });
-    }
+    return Promise.all([
+        new Promise<void>((resolve, reject)=>{ //email Joel
+            if (args.email)
+                emailClient.send({
+                    to: process.env.MY_EMAIL_ADDR,
+                    from: 'bot@joelgrayson.com',
+                    subject: args.email.subject,
+                    text: args.email.body,
+                    replyTo: args.email.replyTo
+                }).then(()=>resolve());
+            else
+                resolve();
+        }),
+        new Promise<void>((resolve, reject)=>{ //text Joel
+            if (args.text)
+                textClient.messages.create({
+                    to: process.env.MY_PHONE_NUMBER,
+                    from: process.env.TWILIO_PHONE_NUMBER,
+                    body: args.text,
+                }).then(()=>resolve());
+            else
+                resolve();
+        })
+    ])
 }
