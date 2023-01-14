@@ -23,7 +23,7 @@ export default function Home() {
                         <br/> Every bus transitioned from diesel to electric:</p>
                     <ul className={styles['plus-bullet-list']}>
                         <li>Saves 17 metric tons of CO<sub>2</sub> equivalent each year, the same as three average New Yorkers emit annually.</li>
-                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley peaking and shaving</a></Link>.</li>
+                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley peaking and shaving</a></Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
                     </ul>
                     <p>
                     </p>
