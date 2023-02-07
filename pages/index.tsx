@@ -23,7 +23,8 @@ export default function Home() {
                         <br/> Every bus transitioned from diesel to electric:</p>
                     <ul className={styles['plus-bullet-list']}>
                         <li>Saves 17 metric tons of CO<sub>2</sub> equivalent each year, the same as three average New Yorkers emit annually.</li>
-                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley peaking and shaving</a></Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
+                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley filling and peak shaving</a></Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
+                        <li>No NOx or CO₂ tailgate emissions. Fewer PM2.5 particles.</li>
                     </ul>
                     <p>
                     </p>
@@ -71,6 +72,12 @@ export default function Home() {
                     <li>Less time off the road for repairs.</li>
                 </ul>
 
+                <h3>More Stable Energy Grid</h3>
+                <ul className={styles['plus-bullet-list']}>
+                    <li><Link href="/images/valley filling & peak shaving.png" target='_blank'><a>Valley filling and peak shaving</a></Link> mean the grid is more stable and needs fewer power plants to operate.</li>
+                    <li>Electricity is cheaper for everyone during high demand.</li>
+                </ul>
+            
             </section>
             <br /><br />
         </main>
