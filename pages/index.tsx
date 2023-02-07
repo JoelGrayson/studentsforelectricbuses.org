@@ -1,7 +1,6 @@
 import Page from '../components/PageContainer';
 import IdlingEngine from '../components/IdlingEngine';
 import styles from '../styles/home/home.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -11,6 +10,7 @@ export default function Home() {
                 <h1 className='text-center pb-8'>Students for Electric Buses</h1>
                 <p> {/* Who we are */}
                     We are a coalition of students from four schools and counting to transition schools from diesel-guzzling buses (&gt;99% of current buses) to electric school buses.
+                    Let&apos;s protect the health of students and Earth with electric school buses.
                 </p>
                 <br/>
             </section>
@@ -48,9 +48,31 @@ export default function Home() {
                     <h3>Savings</h3>
                     <p>Electric school buses are now cheaper than diesel buses their lifetime. Thanks to dozens of incentives, programs, and the nature of an e-bus (cheaper fuel and maintenance costs), they are financially benificial!</p>
                 </div>
-                {/* <p>Let's make sure the future of our world rides healthily on electric school buses.</p> */}
+            
+
+                <br />
+                <h2 className='text-center pb-8'>Other Benefits</h2>
+
+                <h3>Noise Pollution</h3>
+                <ul className={styles['plus-bullet-list']}>
+                    <li>Neighborhoods won&apos;t have to regularly listen to that noisy engine that reaches 80-95 decibels drive through the streets.</li>
+                    <li>Quieter, more peaceful experience for the students, teachers, and drivers. People do not have to shout over the engine to talk to each other.</li>
+                </ul>
+
+                <h3>Less Dependence on Oil</h3>
+                <ul className={styles['plus-bullet-list']}>
+                    <li>No worries about fluctuating gas prices or oil crises. Electricity prices fluctuate much less than gas prices.</li>
+                    <li>It is better for the U.S. economy to be less dependent on foreign oil.</li>
+                </ul>
+                
+                <h3>Less Maintenance</h3>
+                <ul className={styles['plus-bullet-list']}>
+                    <li>E-buses have fewer moving parts, so they do not need as much maintenance.</li>
+                    <li>Less time off the road for repairs.</li>
+                </ul>
+
             </section>
-            <br />
+            <br /><br />
         </main>
     </Page>);
 }
