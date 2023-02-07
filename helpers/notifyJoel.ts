@@ -23,15 +23,15 @@ export default function notifyJoel(args: { //notify Joel of contact form submiss
             else
                 resolve();
         }),
-        new Promise<void>((resolve, reject)=>{ //text Joel
-            if (args.text)
-                textClient.messages.create({
-                    to: process.env.MY_PHONE_NUMBER,
-                    from: process.env.TWILIO_PHONE_NUMBER,
-                    body: args.text,
-                }).then(()=>resolve());
-            else
-                resolve();
-        })
+        // new Promise<void>((resolve, reject)=>{ //text Joel
+        //     if (args.text)
+        //         textClient.messages.create({
+        //             to: process.env.MY_PHONE_NUMBER,
+        //             from: process.env.TWILIO_PHONE_NUMBER,
+        //             body: args.text,
+        //         }).then(()=>resolve());
+        //     else
+        //         resolve();
+        // })
     ])
 }

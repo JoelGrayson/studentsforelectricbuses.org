@@ -6,7 +6,7 @@ import notifyJoel from '../../../helpers/notifyJoel';
 export default async function handler(req: NextApiRequest, res: NextApiResponse<{message: String, queryRes?: any}>) {
     const {name, email, schoolName, numBuses, whyYouWantToJoin}=req.body;
 
-    console.log(req.body);
+    console.log('body', req.body);
 
     const msg=`Name: ${name}\n`
     +`Email: ${email}\n`
@@ -14,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     +`#Buses: ${numBuses}\n`
     +`Why They Want to Join:\n${whyYouWantToJoin}`;
 
+    console.log('Contacting Joel');
     await notifyJoel({ //notify Joel of contact form submission
         email: {
             subject: 'New SEB Join Form Submission',
@@ -23,6 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         text: `---New SEB Join Form Submission---\n${msg}`
     });
 
+    console.log('Creating DB instance');
     const client=new Client({
         host: process.env.PG_HOST,
         user: process.env.PG_USER,
@@ -33,6 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     await client.connect();
 
     try {
+        console.log('Adding to DB');
         const queryRes=await client.query(`
             INSERT INTO join_form (date_submitted, name, email, school_name, num_buses, why_you_want_to_join)
             VALUES

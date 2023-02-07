@@ -24,7 +24,7 @@ export default function Home() {
                     <ul className={styles['plus-bullet-list']}>
                         <li>Saves 17 metric tons of CO<sub>2</sub> equivalent each year, the same as three average New Yorkers emit annually.</li>
                         <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley filling and peak shaving</a></Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
-                        <li>No NOx or CO₂ tailgate emissions. Fewer PM2.5 particles.</li>
+                        <li>No NOx or CO₂ tailgate emissions and fewer PM2.5 particles (dangerous particles for environment and health).</li>
                     </ul>
                     <p>
                     </p>
