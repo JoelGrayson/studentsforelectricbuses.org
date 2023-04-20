@@ -1,5 +1,5 @@
 export default function Headers() {
-    return (<>
+    return <div>
         <h1>Header 1</h1>
         <h2>Header 2</h2>
         <h3>Header 3</h3>
@@ -8,5 +8,5 @@ export default function Headers() {
         <h6>Header 6</h6>
         <div>Div Text</div>
         <code>Code</code>
-    </>);
+    </div>;
 }

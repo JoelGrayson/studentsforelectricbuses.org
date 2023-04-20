@@ -1,7 +1,7 @@
 import styles from '../styles/members/members.module.css';
 import Tooltip from '@mui/material/Tooltip'
 
-export default function MemberSchool({name, fullName, representative, members}) {
+export default function MemberSchool({name, fullName, members}) {
     return (<div className={`${styles.block} ${styles.blockBlue}`}>
         <Tooltip title={fullName} placement="top" arrow>
             <div><u>{name}</u></div>

@@ -79,6 +79,16 @@ export default function Home() {
                 </ul>
             
             </section>
+
+            <section> {/* Articles */}
+                <h2 className='text-center pb-8'>Further Reading</h2>
+                <ul>
+                    <li>
+                        <span>Nature Health Article: <Link href='https://www.nature.com/articles/s41893-023-01088-7'>nature.com/articles/s41893-023-01088-7</Link> (<Link href='#'>annotated version</Link>)</span>
+                        <span>Main points: when older diesel buses were replaced with cleaner vehicles, students attended school more. </span>
+                    </li>
+                </ul>
+            </section>
             <br /><br />
         </main>
     </Page>);

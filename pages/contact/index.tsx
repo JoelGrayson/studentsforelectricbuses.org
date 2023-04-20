@@ -7,7 +7,7 @@ import { Send } from 'react-feather';
 export default function Contact() {
     const [contacted, setContacted]=useState(false);
     
-    return (<Page title='Contact'>
+    return <Page title='Contact'>
         <style jsx>{`
             form label {
                 display: inline-block;
@@ -16,8 +16,7 @@ export default function Contact() {
         `}</style>
         {
             contacted===false //form not submitted yet
-            ?
-            (<form method="POST" action='#' className={styles.form} onSubmit={onFormSubmit(setContacted)}>
+            ?  <form method="POST" action='#' className={styles.form} onSubmit={onFormSubmit(setContacted)}>
                 <div>
                     <label htmlFor='name'>Name</label>
                     <input name='name' id='name' className={styles.input} />
@@ -35,15 +34,13 @@ export default function Contact() {
                     Send
                     <Send height={20} />
                 </button>
-            </form>)
-            :
-            (<>{
+            </form>
+            : (
                 contacted===true //form submitted successfully (confirmed by API)
-                ?
-                <div style={{textAlign: 'center'}}>Thanks for contacting me. I will write back when I can.</div>
+                ? <div style={{textAlign: 'center'}}>Thanks for contacting me. I will write back when I can.</div>
                 : //else an error occurred
-                <div>Hmmm. Something went wrong when submitting this form.</div>
-            }</>)
+                    <div>Hmmm. Something went wrong when submitting this form.</div>
+            )
         }
-    </Page>);
+    </Page>;
 }
