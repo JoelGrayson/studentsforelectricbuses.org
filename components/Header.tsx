@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Header({title, children}: {title?: String, children?: any}) { //takes in parameters for <Head>
     return (<>
         <Head> {/* Default head options */}
-            <title>{title ? `${title} | `: ''}Students for Electric Buses</title>
+            <title>{title ? `${title} | Students for Electric Buses`: 'Students for Electric Buses'}</title>
             <link rel="icon" href="/favicon.ico" type='image/x-icon' />
             {children}
         </Head>

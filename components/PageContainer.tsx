@@ -9,7 +9,7 @@ import Header from './Header';
 
 export default function PageContainer(props: {
     noheader?: boolean;
-    title?: String;
+    title?: string;
     children: any;
     
     nomargin?: boolean;

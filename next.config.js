@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+const jredirects=require('./jredirects/dist');
+
+module.exports={
+    reactStrictMode: true,
+    swcMinify: true,
+    redirects: jredirects
+};
