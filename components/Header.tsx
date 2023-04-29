@@ -17,7 +17,7 @@ export default function Header({title, children}: {title?: String, children?: an
                 <ul>
                     <Link href="/"><li><button>Home</button></li></Link>
                     <Link href="/the-state-of-the-e-bus"><li><button>State of E-Buses</button></li></Link>
-                    <Link href="/dont-forget-private-schools"><li><button>Don't Forget Private Schools</button></li></Link>
+                    <Link href="/dont-forget-private-schools"><li><button>Don&apos;t Forget Private Schools</button></li></Link>
                     {/* <Link href="/members"><li><button>Members</button></li></Link> */}
                     <Link href="/join"><li><button>Join</button></li></Link>
                     <Link href="/contact"><li><button>Contact</button></li></Link>

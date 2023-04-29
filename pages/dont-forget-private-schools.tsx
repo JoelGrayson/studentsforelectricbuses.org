@@ -7,7 +7,7 @@ import { P } from '@jcomponents/writing-components'
 export default function Home() {
     return <Page>
         <main className={styles.main}>
-            <h1 className='text-center'>Don't Forget Private Schools!</h1>
+            <h1 className='text-center'>Don&apos;t Forget Private Schools!</h1>
             <br />
             <P>The federal government and local state governments are helping public schools transition to electric school buses through grants, subsidies, and other financial programs. However, private schools are being excluded from funding.</P>
             <P>While normally private schools do not get public funding in exchange for being able to run the school independently, we believe that there should be an exception for electric school bus funding. Private schools deserve electric school buses just as much as public schools because we all share the same streets. Helping private schools transition to electric school buses will improve street air quality, a public health issue that the government is responsible for. Similarly, we all share the same earth, and transitioning a private school bus to electric does the same to combat climate change as transitioning a public school bus. Also, private school students deserve to avoid health issues just as much as public school students.</P>
