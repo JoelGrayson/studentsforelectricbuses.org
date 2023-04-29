@@ -4,7 +4,7 @@ import styles from '../styles/home/home.module.css';
 import Link from 'next/link';
 
 export default function Home() {
-    return (<Page>
+    return <Page>
         <main className={styles.main}>
             <section> {/* Title */}
                 <h1 className='text-center pb-8'>Students for Electric Buses</h1>
@@ -23,7 +23,7 @@ export default function Home() {
                         <br/> Every bus transitioned from diesel to electric:</p>
                     <ul className={styles['plus-bullet-list']}>
                         <li>Saves 17 metric tons of CO<sub>2</sub> equivalent each year, the same as three average New Yorkers emit annually.</li>
-                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'><a>valley filling and peak shaving</a></Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
+                        <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'>valley filling and peak shaving</Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
                         <li>No NOx or CO₂ tailgate emissions and fewer PM2.5 particles (dangerous particles for environment and health).</li>
                     </ul>
                     <p>
@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                     <div className={styles['health__description']}>
                         <p>
-                            Noxious fumes are harmful to everyone, especially children, whose hearts and lungs are developing. Diesel buses affect those in the bus, and lower the air quality of the communities they drive through. In addition to the bodily harm, <Link href='https://www.nber.org/system/files/working_papers/w25641/w25641.pdf'><a>studies</a></Link> have suggested it takes a toll on students&apos; performance at school.
+                            Noxious fumes are harmful to everyone, especially children, whose hearts and lungs are developing. Diesel buses affect those in the bus, and lower the air quality of the communities they drive through. In addition to the bodily harm, <Link href='https://www.nber.org/system/files/working_papers/w25641/w25641.pdf'>studies</Link> have suggested it takes a toll on students&apos; performance at school.
                         </p>
                         <ul className={styles['plus-bullet-list']}>
                             <li>Decreases students&apos; risk of developing asthma, cardiovascular illnesses, and cancer.</li>
@@ -74,7 +74,7 @@ export default function Home() {
 
                 <h3>More Stable Energy Grid</h3>
                 <ul className={styles['plus-bullet-list']}>
-                    <li><Link href="/images/valley filling & peak shaving.png" target='_blank'><a>Valley filling and peak shaving</a></Link> mean the grid is more stable and needs fewer power plants to operate.</li>
+                    <li><Link href="/images/valley filling & peak shaving.png" target='_blank'>Valley filling and peak shaving</Link> mean the grid is more stable and needs fewer power plants to operate.</li>
                     <li>Electricity is cheaper for everyone during high demand.</li>
                 </ul>
             
@@ -91,5 +91,5 @@ export default function Home() {
             </section>
             <br /><br />
         </main>
-    </Page>);
+    </Page>;
 }

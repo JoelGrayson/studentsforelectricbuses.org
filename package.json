@@ -7,6 +7,7 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
+    "jredirects": "cd jredirects && ./build.sh",
     "old-deploy-to-gcloud-app": "npm run build && gcloud config set project studentsforelectricbuses && gcloud app deploy --quiet",
     "docker-test": "docker build . -t studentsforelectricbuses && open http://localhost:80 && docker run -p 80:3000 studentsforelectricbuses",
     "deploy": "gcloud config set project studentsforelectricbuses && gcloud run deploy --source ."

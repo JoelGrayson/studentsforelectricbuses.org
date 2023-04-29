@@ -17,21 +17,21 @@ export default function Logo() {
         return _=>clearInterval(id);
     }, [hovering]);
     
-    return (<Link href='/'><a>
+    return <Link href='/'>
         <div className={styles.container}
             onMouseEnter={_=>setHovering(true)}
             onMouseLeave={_=>setHovering(false)}
         >
             <div className={styles.entire}>
-                <Image src="/images/Students for Electric Buses Logo.png" alt="Logo" height='80px' width='80px' />
+                <Image src="/images/Students for Electric Buses Logo.png" alt="Logo" height='80' width='80' />
             </div>
             <div className={styles.inner}>
-                <Image alt="Outer logo" height='80px' width='80px' src="/images/rotatable/inner.png" />
+                <Image alt="Outer logo" height='80' width='80' src="/images/rotatable/inner.png" />
             </div>
             <div className={styles.outer} style={{transform: `rotate(${deg}deg)`}}>
-                <Image alt="Inner logo" height='80px' width='80px' src="/images/rotatable/outer.png" />
+                <Image alt="Inner logo" height='80' width='80' src="/images/rotatable/outer.png" />
             </div>
         </div>
-    </a></Link>);
+    </Link>;
 
 }
