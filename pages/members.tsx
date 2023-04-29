@@ -79,7 +79,7 @@ export default function Members() {
         </table> */}
         <br/>
         <div>Want to become a member?&nbsp;&nbsp;
-            <Link href="/join"><a><button className="btn-blue">Join</button></a></Link>
+            <Link href="/join"><button className="btn-blue">Join</button></Link>
         </div>
     </Page>;
 }

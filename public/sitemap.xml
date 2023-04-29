@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- created 4.29.23 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://studentsforelectricbuses.org/</loc>
+    <lastmod>2023-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/Students%20for%20Electric%20Buses%20Logo.png</image:loc>
+        <image:title>Logo</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/idling.png</image:loc>
+        <image:title>Idling</image:title>
+      </image:image>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/valley%20filling%20&amp;%20peak%20shaving.png</image:loc>
+        <image:title>valley filling and peak shaving</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://studentsforelectricbuses.org/dont-forget-private-schools</loc>
+    <lastmod>2023-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/Students%20for%20Electric%20Buses%20Logo.png</image:loc>
+        <image:title>Logo</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://studentsforelectricbuses.org/contact</loc>
+    <lastmod>2023-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/Students%20for%20Electric%20Buses%20Logo.png</image:loc>
+        <image:title>Logo</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://studentsforelectricbuses.org/the-state-of-the-e-bus</loc>
+    <lastmod>2023-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/Students%20for%20Electric%20Buses%20Logo.png</image:loc>
+        <image:title>Logo</image:title>
+      </image:image>
+  </url>
+  <url>
+    <loc>https://studentsforelectricbuses.org/join</loc>
+    <lastmod>2023-04-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://studentsforelectricbuses.org/images/Students%20for%20Electric%20Buses%20Logo.png</image:loc>
+        <image:title>Logo</image:title>
+      </image:image>
+  </url>
+</urlset>
