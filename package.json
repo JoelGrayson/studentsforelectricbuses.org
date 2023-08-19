@@ -16,32 +16,32 @@
     "child_process": false
   },
   "dependencies": {
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "@jcomponents/writing-components": "^1.1.1",
-    "@mui/material": "^5.12.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@jcomponents/writing-components": "^1.1.2",
+    "@mui/material": "^5.14.5",
     "@sendgrid/mail": "^7.7.0",
     "child_process": "^1.0.2",
-    "eslint-plugin-react": "^7.32.2",
-    "google-spreadsheet": "^3.3.0",
-    "next": "13.3.0",
-    "pg": "^8.10.0",
+    "eslint-plugin-react": "^7.33.2",
+    "google-spreadsheet": "^4.0.2",
+    "next": "13.4.19",
+    "pg": "^8.11.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-feather": "^2.0.10",
-    "sharp": "^0.32.0",
-    "twilio": "^4.10.0"
+    "sharp": "^0.32.5",
+    "twilio": "^4.15.0"
   },
   "devDependencies": {
-    "@types/node": "18.15.12",
-    "@types/pg": "^8.6.6",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "autoprefixer": "^10.4.14",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.1",
-    "typescript": "5.0.4"
+    "@types/node": "20.5.1",
+    "@types/pg": "^8.10.2",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "^10.4.15",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
   }
 }
