@@ -11,13 +11,14 @@ export default function PageContainer(props: {
     noheader?: boolean;
     title?: string;
     children: any;
-    
+    bottomPadding?: boolean;
+
     nomargin?: boolean;
     center?: boolean;
 }) {
     return (<>
         {!('noheader' in props) && <Header title={props.title}/> /*include Header unless noheader*/ }
-        <main className={getMainClassName(props)}>
+        <main className={`${getMainClassName(props)} ${props.bottomPadding ? 'mb-20' : ''}`}>
             {props.children}
         </main>
     </>);
