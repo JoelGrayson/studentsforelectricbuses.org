@@ -10,10 +10,12 @@
             background-color: #d2f0d5
         ul
             padding: 0
-            display: flex
-            width: 700px
-            justify-content: flex-end
-            margin-right: 1rem
             gap: .2rem
+            @media (min-width: 640px)
+                display: flex
+                justify-content: flex-end
+                width: 700px
+                margin-right: 1rem
+
         li
             list-style-type: none

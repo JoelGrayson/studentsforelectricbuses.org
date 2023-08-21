@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Header({title, children}: {title?: String, children?: any}) { //takes in parameters for <Head>
-    return (<>
+    return <>
         <Head> {/* Default head options */}
             <title>{title ? `${title} | Students for Electric Buses`: 'Students for Electric Buses'}</title>
             <link rel="icon" href="/favicon.ico" type='image/x-icon' />
@@ -12,9 +12,10 @@ export default function Header({title, children}: {title?: String, children?: an
         </Head>
 
         <header className={styles.header}>
-            <Logo/>
+            <Logo />
             <nav>
-                <ul>
+                <ul className='m:grid m:grid-cols-3 m:grid-rows-2 m:place-items-center'>
+                    {/* w-full m:p-0 m:grid grid-cols-3 grid-rows-2 */}
                     <Link href="/"><li><button>Home</button></li></Link>
                     <Link href="/meetings"><li><button>Meetings</button></li></Link>
                         {/* TODO: insert v down arrow for fast selecting */}
@@ -32,5 +33,5 @@ export default function Header({title, children}: {title?: String, children?: an
                 </ul>
             </nav>
         </header>
-    </>);
+    </>;
 }

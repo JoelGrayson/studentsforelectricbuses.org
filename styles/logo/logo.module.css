@@ -18,29 +18,14 @@
 
 .outer {
   display: absolute;
-  -webkit-transform-origin: 40px 40px;
-          transform-origin: 40px 40px;
-}
-
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  transform-origin: 40px 40px;
 }
 
 @keyframes rotating {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-}
-/*# sourceMappingURL=logo.module.css.map */
+}/*# sourceMappingURL=logo.module.css.map */
