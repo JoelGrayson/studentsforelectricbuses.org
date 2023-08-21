@@ -2,7 +2,7 @@ import { redirects } from './_internals/types';
 
 export const temporary: redirects={ //302
     // Write your redirects here:
-    '/meetings': ['/meeting', '/meetings', '/meeting-meetings'],
+    '/meetings': ['/meeting', '/agendas', '/meeting-meetings'],
     
     // Examples:
     'https://www.youtube.com/watch?v=dQw4w9WgXcQ': '/rick-roll', // external site
@@ -13,6 +13,6 @@ export const temporary: redirects={ //302
 
 export const permanent: redirects={ //301
     // Redirects here will be cached, so changing/deleting them in the future will not reflect immediately
-    'https://docs.google.com/document/d/1hjc1ZM9gfHd7VsPnQcnHtzrVOx8RguzEajhax7rk7Ww/edit': '/meeting',
+    // 'https://docs.google.com/document/d/1hjc1ZM9gfHd7VsPnQcnHtzrVOx8RguzEajhax7rk7Ww/edit': '/meeting',
     '/the-state-of-the-e-bus': ['/state-of-the-e-bus', '/the-state', '/state', '/the-state-of-the-electric-bus', '/the-state-of-electric-buses', '/state-of-the-electric-bus', '/state-of-the-electric-buses', '/state-of-the-ebus', '/state-of-the-ebuses']
 };

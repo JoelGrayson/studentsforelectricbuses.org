@@ -9,9 +9,12 @@ export default function Meetings() {
         <ul>
             {list.map(meeting=>{
                 return <li key={meeting.hyphenatedTitle}>
-                    <Link href={`/meetings/${meeting.hyphenatedTitle}`}>
-                        {jdate(meeting.date)} - {meeting.title}
-                    </Link>
+                    <Link href={`/meetings/${meeting.hyphenatedTitle}`}>{
+                        meeting.title.split(' ')[0]===jdate(meeting.date) ||
+                        meeting.title.split(' ')[0]===jdate(meeting.date, true)
+                            ? `${jdate(meeting.date)} - ${meeting.title.split(' ').slice(1).join(' ')}` //title already includes date
+                            : `${jdate(meeting.date)} - ${meeting.title}`
+                    }</Link>
                 </li>;
             })}
         </ul>

@@ -53,7 +53,7 @@ export default function Header({title, children}: {title?: String, children?: an
                     marginRight: dropdown ? 0 : undefined,
                     display: 'inline-block'
                 }}>
-                    <button style={{
+                    <button className='m:!rounded-[3px]' style={{
                         backgroundColor: route===href ? '#90ee90' : undefined,
                         borderColor: route===href ? 'darkgreen' : undefined,
                         borderTopRightRadius: dropdown ? 0 : undefined,
@@ -65,8 +65,9 @@ export default function Header({title, children}: {title?: String, children?: an
             </Link>
             { dropdown && <>
                 <button
+                    className='m:hidden'
                     style={{
-                        display: 'inline-block',
+                        // display: 'inline-block',
                         marginRight: '.2rem',
                         borderTopLeftRadius: 0,
                         borderBottomLeftRadius: 0,
