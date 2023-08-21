@@ -5,7 +5,7 @@
     "baseUrl": ".",
     "paths": {
         "@/components/*": ["./components/*"],
-        "@/styles/*": ["./styles/*"],
+        "@/pages/*": ["./pages/*"],
         "@/helpers/*": ["./helpers/*"],
         "@/styles/*": ["./styles/*"]
     },

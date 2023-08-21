@@ -120,5 +120,6 @@ button:disabled {
 }
 .btn-red   { background-color: #ff8f8f; }
 .btn-yellow{ background-color: #ffd472; }
+/* .btn-green { background-color: #51d751; } */
 .btn-green { background-color: #90ee90; }
 .btn-blue  { background-color: #aed8fc; }
