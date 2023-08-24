@@ -1,6 +1,7 @@
 import { redirects } from './_internals/types';
 
 export const temporary: redirects={ //302
+    '/#dont-forget-private-schools': '/dont-forget-private-schools',
     // Write your redirects here:
     '/meetings': ['/meeting', '/agendas', '/meeting-meetings'],
     
