@@ -8,6 +8,9 @@
           "jsx"
         ]
       }
+    ],
+    "@next/next/no-img-element": [
+      0
     ]
   }
 }
