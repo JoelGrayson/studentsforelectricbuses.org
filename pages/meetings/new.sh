@@ -40,7 +40,7 @@ IFS=$'\n'
 touch new_list.tmp
 while read p; do
     echo "$p" >> new_list.tmp
-    [[ "$p" == "// ./new.sh inserts new meeting here" ]] && echo "    { title: '$title', hyphenatedTitle: '$hyphenatedTitle', date: new Date('$date') }," >> new_list.tmp
+    [[ "$p" == "// shell files insert new meeting here" ]] && echo "    { title: '$title', hyphenatedTitle: '$hyphenatedTitle', date: new Date('$date') }," >> new_list.tmp
 done < "./list.tsx"
 IFS=$old_IFS
 cat new_list.tmp > list.tsx
