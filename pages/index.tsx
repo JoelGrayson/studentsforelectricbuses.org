@@ -8,7 +8,7 @@ export default function Home() {
     return <Page bottomPadding>
         <main className={styles.main}>
             <section> {/* Title */}
-                <h1 className='text-center pb-8'>Students for Electric Buses</h1>
+                <h1 className='text-center pb-8 m:text-[1.7rem]'>Students for Electric Buses</h1>
                 <p> {/* Who we are */}
                     We are a coalition of students from four schools and counting to transition schools from diesel-guzzling buses (&gt;99% of current buses) to electric school buses.
                     Let&apos;s protect the health of students and Earth with electric school buses.
