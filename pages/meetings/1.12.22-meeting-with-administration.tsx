@@ -1,8 +1,7 @@
 import MeetingContainer from '@/components/MeetingContainer';
 
 export default function Meeting() {
-    return <MeetingContainer date={'Jan 12, 2022'} title={'1.12.22 Meeting'}>
-        		<p>1-12-22 Meeting Notes</p>
+    return <MeetingContainer date={'Jan 12, 2022'} title={'1.12.22 Meeting with Administration'}>
 		<p>Goals:</p>
 		<ul>
 		<li><blockquote>

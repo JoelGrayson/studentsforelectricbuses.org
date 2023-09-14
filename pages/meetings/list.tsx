@@ -10,7 +10,7 @@ export type meetingT={
 
 export const list: meetingT[]=[
 // shell files insert new meeting here
-    { title: '1.12.22 Meeting', hyphenatedTitle: '1.12.22-meeting', date: new Date('Jan 12, 2022') },
+    { title: '1.12.22 Meeting with Administration', hyphenatedTitle: '1.12.22-meeting-with-administration.tsx', date: new Date('Jan 12, 2022') },
     { title: 'Meeting with Riverdale Administration', hyphenatedTitle: 'meeting-with-riverdale-administration', date: new Date('Jan 12, 2022') },
     { title: 'Meeting with Fieldston Teachers', hyphenatedTitle: 'meeting-with-fieldston-teachers', date: new Date('Jan 17, 2022') },
     { title: 'Meeting with Fieldston', hyphenatedTitle: 'meeting-with-fieldston', date: new Date('Apr 14, 2022') },
