@@ -26,7 +26,7 @@ export default function NotFound() {
                 <ResolutionsList />
             </>);
         }
-    }, []);
+    }, [url]);
 
     return <Page title='404 Not Found'>
         <h1 className='text-center'>{title}</h1>
