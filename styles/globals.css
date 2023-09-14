@@ -5,10 +5,25 @@
 /* </> */
 
 
+/**|| <Font (sorted by boldness) */
+@font-face {
+    font-family: Avenir;
+    src: url('../public/styles/fonts/Avenir\ Book.ttf');
+}
+@font-face {
+    font-family: AvenirMedium;
+    src: url('../public/styles/fonts/Avenir\ Medium.ttf');
+}
+@font-face {
+    font-family: Myriad;
+    src: url('../public/styles/fonts/Myriad\ Pro\ Bold.ttf');
+}
+/* > */
+
 html, body {
     padding: 0;
     margin: 0;
-    font-family: Roboto, Helvetica Neue, sans-serif;
+    font-family: Avenir, sans-serif;
 }
 
 a {
@@ -21,13 +36,26 @@ a {
 }
 
 /* <Defaults> */
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h2, h3, h4, h5 {
+    font-family: Myriad;
+    line-height: 1.8;
+}
+h1 { font-size: 3.0rem; margin-top: 10px; }
+h2 { font-size: 2.1rem; margin-top: 8px; }
+h3 { font-size: 1.6rem; margin-top: 7px; }
+h4 { font-size: 1.3rem; margin-top: 6px; font-family: AvenirMedium; }
+h5 { font-size: 1.2rem; margin-top: 5px; font-family: AvenirMedium; }
+h6 { font-size: 1.1rem; margin-top: 4px; font-family: AvenirMedium; }
+.bold {
+    font-family: Myriad;
+}
+/* h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 h1 { font-size: 36px; }
 h2 { font-size: 28px; }
 h3 { font-size: 24px; }
 h4 { font-size: 20px; }
 h5 { font-size: 18px; }
-h6 { font-size: 16px; }
+h6 { font-size: 16px; } */
 
 ul:not(.unstyled) {
     padding-left: 2rem;
@@ -50,16 +78,9 @@ a:not(.unstyled):hover {
 /* </> */
 
 /* UCJG.v2.css */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
-
-* {
-    font-family: Lato, Futura, sans-serif;
-}
-
 p {
     line-height: 1.7;
 }
-
 
 code { /* light code like notion */
     font-family: monospace;

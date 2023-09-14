@@ -6,6 +6,7 @@ import jdate from 'joeldate';
 export default function Resolutions() {
     return <Page>
         <h1 className='text-center pb-8'>Resolutions</h1>
+        Coming soon...
         <ul>
             {list.map(resolution=>{
                 return <li key={resolution.hyphenatedTitle}>
