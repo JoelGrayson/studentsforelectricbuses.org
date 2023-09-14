@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { list as meetingsList } from '@/pages/meetings/list';
+import { list as resolutionsList } from '@/pages/resolutions/list';
 import { useState } from 'react';
 
 export default function Header({title, children}: {title?: String, children?: any}) { //takes in parameters for <Head>
@@ -25,7 +26,7 @@ export default function Header({title, children}: {title?: String, children?: an
                     <Li href="/">Home</Li>
                     <Li href="/meetings" dropdown={meetingsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Meetings</Li>
                         {/* TODO: insert v down arrow for fast selecting */}
-                    <Li href="/resolutions">Resolutions</Li>
+                    <Li href="/resolutions" dropdown={resolutionsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Resolutions</Li>
                         {/* TODO: insert v down arrow for fast selecting */}
                         {/* <button>v</button> */}
                     
@@ -78,7 +79,7 @@ export default function Header({title, children}: {title?: String, children?: an
                     {open ? '^' : 'v'}
                 </button>
             </> }
-            { open && dropdown && <div className='absolute top-[2.3rem] left-0'>
+            { open && dropdown && <div className='absolute top-[2.3rem] left-0 w-[300px] m:w-[190px] m:mt-3'>
                 {dropdown.map((item, index)=>{
                     return <div className='w-full bg-white hover:bg-gray-300 p-3' style={{
                         border: '1px solid black',
