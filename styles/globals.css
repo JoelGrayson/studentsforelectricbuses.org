@@ -46,7 +46,7 @@ h3 { font-size: 1.6rem; margin-top: 7px; }
 h4 { font-size: 1.3rem; margin-top: 6px; font-family: AvenirMedium; }
 h5 { font-size: 1.2rem; margin-top: 5px; font-family: AvenirMedium; }
 h6 { font-size: 1.1rem; margin-top: 4px; font-family: AvenirMedium; }
-.bold {
+b, .bold {
     font-family: Myriad;
 }
 /* h1, h2, h3, h4, h5, h6 { font-weight: bold; }

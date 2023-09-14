@@ -13,11 +13,10 @@ export default function Home() {
                     We are a coalition of students from four schools and counting to transition schools from diesel-guzzling buses (&gt;99% of current buses) to electric school buses.
                     Let&apos;s protect the health of students and Earth with electric school buses.
                 </p>
-                <br/>
             </section>
 
             <section> {/* Why */}
-                <h2 className='text-center pb-8'>Why Transition to Electric School Buses?</h2>
+                <h2 className='text-center pb-4'>Why Transition to Electric School Buses?</h2>
                 <div className={styles.environment}>
                     <h3>Environment</h3>
                     <p>Electric school buses are part of the world&apos;s transition to clean infrastructure.
