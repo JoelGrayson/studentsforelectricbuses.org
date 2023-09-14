@@ -4,16 +4,19 @@ export { default } from '.'; //same as index.tsx
 export enum ResolutionStatus {
     Idea='Idea',
     Draft='Draft',
-    Passed='Passed'
+    Passed='Passed',
+    Complete='Complete'
 };
+
 export type resolutionT={
     title: string;
     hyphenatedTitle: string;
     date: Date;
     status: ResolutionStatus;
-}
+};
 
 export const list: resolutionT[]=[
-    // { title: 'Final 2022–23 Meeting', hyphenatedTitle: 'final-meeting-2022-23', date: new Date('May 31, 2023') },
-];
+// shell files insert new resolution here
+    { title: 'Contacting Manufacturers', hyphenatedTitle: 'contacting-manufacturers', date: new Date('Dec 17, 2021'), status: ResolutionStatus.Complete },
+].sort((a, b)=>b.date.getTime()-a.date.getTime());;
 
