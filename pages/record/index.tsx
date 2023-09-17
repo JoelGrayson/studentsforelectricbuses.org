@@ -23,7 +23,8 @@ export default function Record() {
         
         <h3>2022 Halloween</h3>
         <figure>
-            <Image src='/images/costume.jpg' alt='Electric School Bus Halloween Costume' width={500} height={375} />
+            <Image src='/images/costume.jpg' className='inline mr-3' alt='Electric School Bus Halloween Costume' width={400} height={300} />
+            <Image src='/images/costume-2.jpg' className='inline' alt='Costume front view' width={225} height={300} />
             <figcaption>2022 Halloween</figcaption>
         </figure>
         
