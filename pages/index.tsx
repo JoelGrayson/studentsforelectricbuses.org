@@ -4,14 +4,20 @@ import styles from '../styles/home/home.module.css';
 import Link from 'next/link';
 import { P } from '@jcomponents/writing-components';
 
+export function Info({children}: {children: React.ReactNode}) {
+    return <>
+        <svg className="bi bi-info-circle-fill" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" /></svg>
+        <div>{children}</div>
+    </>;
+}
+
 export default function Home() {
     return <Page bottomPadding>
         <main className={styles.main}>
             <section> {/* Title */}
                 <h1 className='text-center pb-8 m:text-[1.7rem]'>Students for Electric Buses</h1>
                 <p> {/* Who we are */}
-                    We are a coalition of students from four schools and counting to transition schools from diesel-guzzling buses (&gt;99% of current buses) to electric school buses.
-                    Let&apos;s protect the health of students and Earth with electric school buses.
+                    We are a coalition of students from four schools and counting to transition schools from diesel-guzzling (&gt;99% of current buses) to electric school buses. If you want to combat climate change as a student through clean infrastructure that will last long after you graduate, <Link href='/join'>join us</Link>.
                 </p>
             </section>
 
@@ -19,12 +25,17 @@ export default function Home() {
                 <h2 className='text-center pb-4'>Why Transition to Electric School Buses?</h2>
                 <div className={styles.environment}>
                     <h3>Environment</h3>
-                    <p>Electric school buses are part of the world&apos;s transition to clean infrastructure.
-                        <br/> Every bus transitioned from diesel to electric:</p>
+                    <p>
+                        Electric school buses are part of the world&apos;s transition to clean infrastructure.
+                        <br/>
+                        Every bus transitioned from diesel to electric:
+                    </p>
                     <ul className={styles['plus-bullet-list']}>
-                        <li>Saves 17 metric tons of CO<sub>2</sub> equivalent each year, the same as three average New Yorkers emit annually.</li>
+                        <li>
+                            Saves 17 metric tons of CO<sub>2</sub> equivalent each year (this will increase with clean electricity generation)
+                        </li>
                         <li>Stabilizes the grid through <Link href="/images/valley filling & peak shaving.png" target='_blank'>valley filling and peak shaving</Link>, reducing the use of fossil fuels during energy valleys and making the grid more resilient.</li>
-                        <li>No NOx or CO₂ tailgate emissions and fewer PM2.5 particles (dangerous particles for environment and health).</li>
+                        <li>Does not emit particulate matter (PM2.5 and PM10), carbon monoxide, NOx, or CO₂ tailgate emissions, improving air quality.</li>
                     </ul>
                     <p>
                     </p>
@@ -35,12 +46,11 @@ export default function Home() {
                         <IdlingEngine />
                     </div>
                     <div className={styles['health__description']}>
-                        <p>
-                            Noxious fumes are harmful to everyone, especially children, whose hearts and lungs are developing. Diesel buses affect those in the bus, and lower the air quality of the communities they drive through. In addition to the bodily harm, <Link href='https://www.nber.org/system/files/working_papers/w25641/w25641.pdf'>studies</Link> have suggested it takes a toll on students&apos; performance at school.
-                        </p>
+                        <p>The noxious fumes produced by conventional school buses are harmful to the passengers (especially children, whose hearts and lungs are developing), pedestrians, and the communities the bus drives through. In addition to lung and heart problems, <Link href='https://www.nber.org/system/files/working_papers/w25641/w25641.pdf'>studies</Link> have suggested it takes a toll on students&apos; performance at school.</p>
                         <ul className={styles['plus-bullet-list']}>
                             <li>Decreases students&apos; risk of developing asthma, cardiovascular illnesses, and cancer.</li>
-                            <li>If all of NYC&apos;s schools switched over to electric, it would save $18 million in health care costs. -City Hall</li>
+                            {/* <li>If all of NYC&apos;s schools switched over to electric, it would save $18 million in health care costs. —City Hall</li> */}
+                            <li>The American Lung Association in New York has noted that moving the State&apos;s entire vehicle fleet to clean transportation would result in up to 159,000 avoided asthma attacks while generating $68.2 billion in public health benefits statewide. —<a href="https://www.nyserda.ny.gov/All-Programs/Electric-School-Buses">NYSERDA</a></li>
                         </ul>
                     </div>
                 </div>
@@ -56,7 +66,7 @@ export default function Home() {
 
                 <h3>Noise Pollution</h3>
                 <ul className={styles['plus-bullet-list']}>
-                    <li>Neighborhoods won&apos;t have to regularly listen to that noisy engine that reaches 80-95 decibels drive through the streets.</li>
+                    <li>Neighborhoods won&apos;t have to regularly listen to that noisy engine that reaches 80–95 decibels drive through the streets.</li>
                     <li>Quieter, more peaceful experience for the students, teachers, and drivers. People do not have to shout over the engine to talk to each other.</li>
                 </ul>
 
