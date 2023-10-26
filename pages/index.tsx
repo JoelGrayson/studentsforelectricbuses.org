@@ -64,6 +64,14 @@ export default function Home() {
                 <br />
                 <h2 className='text-center pb-8'>Other Benefits</h2>
 
+                <h3>Student Attendance and Success</h3>
+                <ul className={styles['plus-bullet-list']}>
+                    <li>This Nature article (<a target='_blank' href='https://www.nature.com/articles/s41893-023-01088-7'>original</a>, <a href="/files/nature-attendance.pdf" target='_blank'>annotated version</a>) showed that replacing old buses with clean buses improves student attendance.</li>
+                    <li>Other studies have shown that lowering diesel fumes improve test scores, physical activity performance, and reductions in lung inflammation.</li>
+                    {/* <li>TODO: better grades</li> */}
+                    {/* TODO: read Austin et al. (29) and footnote 13 */}
+                </ul>
+
                 <h3>Noise Pollution</h3>
                 <ul className={styles['plus-bullet-list']}>
                     <li>Neighborhoods won&apos;t have to regularly listen to that noisy engine that reaches 80–95 decibels drive through the streets.</li>
