@@ -9,14 +9,11 @@ export default function MarkdownPage({ filename }: { filename: string /* string 
     const [markdown, setMarkdown]=useState('');
 
     useEffect(() => {
-        // Fetch your markdown content here and set it using setMarkdown
-        // For example, from a local file:
-        fetch(`/markdown/${filename}`) //from public
+        fetch(`/markdown/${filename}`) //from public folder
             .then((res)=>res.text())
             .then((text)=>setMarkdown(text))
             .catch((err)=>console.error(err));
-    }, [filename]); // Empty dependency array to run only once on mount
-
+    }, []);
 
     return <Page>
         <Markdown options={{
