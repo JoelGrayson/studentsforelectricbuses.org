@@ -1,6 +1,7 @@
 import Page from '@/components/PageContainer';
 import Link from 'next/link';
 import Image from 'next/image';
+import Yt from '@/components/Yt';
 
 export default function Record() {
     return <Page bottomPadding>
@@ -12,25 +13,30 @@ export default function Record() {
         
         <h1 className='text-center'>Record</h1>
 
-        <h3>Historical Timeline</h3>
-        <iframe width="560" height="315" className='m:w-fit m:h-fit' src="https://www.youtube.com/embed/dq4KiZ5Mov0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        {/* <h3>Historical Timeline</h3>
+        <iframe width="560" height="315" className='m:w-fit m:h-fit' src="https://www.youtube.com/embed/dq4KiZ5Mov0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> */}
 
-        <h3>Photos</h3>
-        <figure>
+        {/* <figure className='flex items-center flex-col'>
             <Image src='/images/club-meeting.jpg' alt='5.31.23 Club Meeting' width={500} height={375} />
-            <figcaption>5.31.23 Club Meeting</figcaption>
-        </figure>
-        
+            <figcaption className=''>5.31.23 Club Meeting</figcaption>
+        </figure> */}
+
+        <Row event='Second Meeting with SuperSelby' time='Apr 27, 2023'>
+            <Yt>1WWflsD5vXM</Yt>
+        </Row>
+        <Row event='First Meeting with SuperSelby' time='Mar 6, 2023'>
+            <Yt>TGqYREiAAao</Yt>
+        </Row>
+        <Row event='Club Advertisement Video' time='Sep 2022'>
+            <Yt>6Hh6h2r4Sbw</Yt>
+        </Row>
+
         <h3>2022 Halloween</h3>
         <figure>
             <Image src='/images/costume.jpg' className='inline mr-3' alt='Electric School Bus Halloween Costume' width={400} height={300} />
             <Image src='/images/costume-2.jpg' className='inline' alt='Costume front view' width={225} height={300} />
             <figcaption>2022 Halloween</figcaption>
         </figure>
-        
-        <h3>2022–23 Club Advertisement Video</h3>
-        <iframe width="560" height="315" className='m:w-fit m:h-fit' src="https://www.youtube.com/embed/6Hh6h2r4Sbw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
         
         <h3>Sustainable Development Goals</h3>
         <figure>
@@ -39,3 +45,24 @@ export default function Record() {
         </figure>
     </Page>;
 }
+
+
+export function Row({ event, time, children }: { event: React.ReactNode; time: React.ReactNode; children: React.ReactNode }) {
+    return <div className='grid grid-rows-10 grid-cols-[2fr_3fr] items-center justify-center'>
+        {/* Timeline Bar */}
+        <div className='flex items-center'>
+            <div className='bg-blue-800 h-96 w-2 m:w-fit m:h-fit'>
+            </div>
+            <div>
+                <div className='bg-blue-800 text-white p-3 py-2 rounded-r-xl mb-3'>{event}</div>
+                <div className='bg-blue-800 text-white p-3 py-2 rounded-r-xl'>{time}</div>
+            </div>
+        </div>
+
+        {/* Content */}
+        <div>
+            {children}
+        </div>
+    </div>
+}
+
