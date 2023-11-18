@@ -14,7 +14,7 @@ export default function Logo() {
             else
                 setDeg(deg=>deg)
         }, 5);
-        return _=>clearInterval(id);
+        return ()=>clearInterval(id);
     }, [hovering]);
     
     return <Link href='/'>
