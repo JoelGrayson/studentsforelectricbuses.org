@@ -5,7 +5,7 @@ import styles from '../styles/home/home.module.css';
 // Config
 const START_LOC=[206, 168];
 const SPEED=[1.8, .9];
-const FREQ=300; //ms to spawn circles
+const FREQ=200; //ms to spawn circles
 
 export default function IdlingEngine() {
     const fumesRef=useRef(null);
@@ -47,9 +47,13 @@ export default function IdlingEngine() {
             requestAnimationFrame(animate);
             c.clearRect(0, 0, innerWidth+200, innerHeight+200); //clear the frame
             
-            if (Date.now()-tSinceCircle>(FREQ*Math.random()*2)) { //±200
+            if (Date.now()-tSinceCircle>(FREQ*Math.random()*2)) { //frequency is randomized with mean at FREQ
                 tSinceCircle=Date.now();
                 circs.push(new FumeCircle());
+                for (let i=0; i<circs.length; i++) {
+                    if (circs[i].opacity<0)
+                        circs.splice(i, 1);
+                }
             }
             
             for (let i=0; i<circs.length; i++) {
