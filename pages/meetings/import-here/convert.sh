@@ -34,16 +34,21 @@ export default function Meeting() {
 }
 EOF
 
-# Add to list.tsx
+# Add to list.ts
 old_IFS=$IFS
 IFS=$'\n'
 touch new_list.tmp
 while read p; do
     echo "$p" >> new_list.tmp
     [[ "$p" == "// shell files insert new meeting here" ]] && echo "    { title: '$title', hyphenatedTitle: '$hyphenatedTitle', date: new Date('$date') }," >> new_list.tmp
-done < ../list.tsx
+done < ../list.ts
 IFS=$old_IFS
-cat new_list.tmp > ../list.tsx
+cat new_list.tmp > ../list.ts
 rm new_list.tmp
 rm "$html_filename"
 
+mv "$file" ~/.Trash
+
+
+echo "Change the image sources in the file from ../../../public/[url] to /[url]"
+echo "Convert from HTML to JSX"
