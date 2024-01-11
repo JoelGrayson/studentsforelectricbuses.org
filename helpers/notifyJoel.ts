@@ -1,6 +1,6 @@
 const emailClient=require('@sendgrid/mail');
 emailClient.setApiKey(process.env.SENDGRID_API_KEY);
-const textClient=require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+// const textClient=require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 export default function notifyJoel(args: { //notify Joel of contact form submission
     text?: String;
@@ -23,6 +23,7 @@ export default function notifyJoel(args: { //notify Joel of contact form submiss
             else
                 resolve();
         }),
+        // // Not using because Twilio is expensive $$$
         // new Promise<void>((resolve, reject)=>{ //text Joel
         //     if (args.text)
         //         textClient.messages.create({

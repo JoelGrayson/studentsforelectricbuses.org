@@ -12,6 +12,7 @@ import Page from "../../components/PageContainer";
 import onFormSubmit from './onFormSubmit';
 import styles from '../../styles/form/form.module.css';
 import styled from "@emotion/styled";
+import Loader from '@/components/Loader';
 
 export default function Join() {
     const [content, setContent]=useState<String>('form');
@@ -56,6 +57,9 @@ export default function Join() {
 
                 <button className="btn-blue">Join</button>
             </form>)
+            :
+            content==='loading'
+            ? <Loader width={30} />
             :
             (<div>{content.split('\n').map(line=><p key={`${line}-${Math.random()}`}>{line} <br/></p>)}</div>) //Newline processing: \n → <p>
         }

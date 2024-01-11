@@ -14,13 +14,13 @@ export default function onFormSubmit(setContacted: Function) {
             },
             body: JSON.stringify({ name, email, message })
         })
-        .then(res=>res.json())
-        .then(res=>{
-            console.log(res);
-            if (res.queryRes.command==='INSERT') //successfully contacted
+            .then(res=>res.json())
+            .then(res=>{
+                console.log(res);
                 setContacted(true);
-            else
+            })
+            .catch(res=>{
                 setContacted('error');
-        });
+            });
     }
 }

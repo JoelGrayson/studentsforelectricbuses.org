@@ -12,6 +12,8 @@ export default function onFormSubmitted(setContent: Function) {
 
         console.log(values);
 
+        setContent('loading');
+
         // Add to database
         fetch('/api/join-form/new', {
             method: 'POST',
@@ -20,13 +22,13 @@ export default function onFormSubmitted(setContent: Function) {
             },
             body: JSON.stringify(values)
         })
-        .then(res=>res.json())
-        .then(res=>{
-            console.log(res);
-            if (res?.queryRes?.command==='INSERT') //successfully contacted
+            .then(res=>res.json())
+            .then(res=>{
+                console.log(res);
                 setContent(res.message);
-            else
-                setContent(`The following error occurred :(\n\n${res.message}\n\n I'm sorry this form is not working. Please try emailing me, instead at joel@joelgrayson.com`);
-        });
+            })
+            .catch(res=>{
+                setContent(`I'm sorry this form is not working. Please try emailing me your response instead at joel@joelgrayson.com`);
+            });
     }
 }
