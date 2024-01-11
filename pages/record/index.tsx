@@ -1,7 +1,7 @@
 import Page from '@/components/PageContainer';
-import Link from 'next/link';
 import Image from 'next/image';
 import Yt from '@/components/Yt';
+import { isMobile } from 'react-device-detect';
 
 export default function Record() {
     return <Page bottomPadding>
@@ -22,13 +22,13 @@ export default function Record() {
         </figure> */}
 
         <Row event='Second Meeting with SuperSelby' time='Apr 27, 2023'>
-            <Yt>1WWflsD5vXM</Yt>
+            <Yt width={isMobile ? 300 : undefined}>1WWflsD5vXM</Yt>
         </Row>
         <Row event='First Meeting with SuperSelby' time='Mar 6, 2023'>
-            <Yt>TGqYREiAAao</Yt>
+            <Yt width={isMobile ? 300 : undefined}>TGqYREiAAao</Yt>
         </Row>
         <Row event='Club Advertisement Video' time='Sep 2022'>
-            <Yt>6Hh6h2r4Sbw</Yt>
+            <Yt width={isMobile ? 300 : undefined}>6Hh6h2r4Sbw</Yt>
         </Row>
 
         <h3>2022 Halloween</h3>
@@ -48,14 +48,14 @@ export default function Record() {
 
 
 export function Row({ event, time, children }: { event: React.ReactNode; time: React.ReactNode; children: React.ReactNode }) {
-    return <div className='grid grid-rows-10 grid-cols-[2fr_3fr] items-center justify-center'>
+    return <div className='grid grid-rows-10 d:grid-cols-[2fr_3fr] items-center justify-center'>
         {/* Timeline Bar */}
-        <div className='flex items-center'>
-            <div className='bg-blue-800 h-96 w-2 m:w-fit m:h-fit'>
+        <div className='flex d:items-center m:justify-center m:mt-10'>
+            <div className='bg-blue-800 d:h-96 d:w-2 m:w-fit m:h-fit'>
             </div>
             <div>
-                <div className='bg-blue-800 text-white p-3 py-2 rounded-r-xl mb-3'>{event}</div>
-                <div className='bg-blue-800 text-white p-3 py-2 rounded-r-xl'>{time}</div>
+                <div className='d:bg-blue-800 d:text-white p-3 py-2 m:py-0 rounded-r-xl mb-3'>{event}</div>
+                <div className='d:bg-blue-800 d:text-white p-3 py-2 m:py-0 rounded-r-xl'>{time}</div>
             </div>
         </div>
 
