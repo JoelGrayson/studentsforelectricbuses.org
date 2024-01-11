@@ -7,7 +7,8 @@
         "@/components/*": ["./components/*"],
         "@/pages/*": ["./pages/*"],
         "@/helpers/*": ["./helpers/*"],
-        "@/styles/*": ["./styles/*"]
+        "@/styles/*": ["./styles/*"],
+        "@/data/*": ["./data/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,

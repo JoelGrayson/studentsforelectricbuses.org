@@ -1,7 +1,7 @@
 // import { Client } from 'pg';
 // import date2Timestamp from '../../../helpers/date2Timestamp';
 import notifyJoel from '../../../helpers/notifyJoel';
-import prisma from 'data/prisma/client';
+import prisma from '@/data/prisma/client';
 
 export default async function handler(req, res) {
     const {name, email, message}=req.body;

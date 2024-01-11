@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 // import { Client } from 'pg';
 // import date2Timestamp from '../../../helpers/date2Timestamp';
 import notifyJoel from '../../../helpers/notifyJoel';
-import prisma from 'data/prisma/client';
+import prisma from '@/data/prisma/client';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<{message: String, queryRes?: any}>) {
     const {name, email, schoolName, numBuses, whyYouWantToJoin}=req.body;
