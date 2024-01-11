@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model contact_form {
+  id             Int       @id @default(autoincrement())
+  date_submitted DateTime? @db.Timestamp(6) //utc
+  name           String?   @db.VarChar(128)
+  email          String?   @db.VarChar(256)
+  message        String?
+}
+
+model join_form {
+  id                   Int       @id @default(autoincrement())
+  date_submitted       DateTime? @db.Timestamp(6) //utc
+  name                 String    @db.VarChar(128)
+  email                String?   @db.VarChar(256)
+  school_name          String?   @db.VarChar(256)
+  num_buses            String?   @db.VarChar(32) //approximate
+  why_you_want_to_join String?
+}

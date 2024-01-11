@@ -6,6 +6,6 @@ secret/*
 /build
 **/.DS_Store
 **/.env
-data
+data/backups
 TODO
 package-lock.json
