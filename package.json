@@ -6,7 +6,7 @@
     "start": "next start",
     "dev": "next dev",
     "lint": "next lint",
-    "build": "next build && npm run jredirects",
+    "build": "prisma generate && next build && npm run jredirects",
     "fast-build": "next build",
     "jredirects": "cd jredirects && ./build.sh",
     "docker-test": "docker build . -t studentsforelectricbuses && open http://localhost:80 && docker run -p 80:3000 studentsforelectricbuses",
