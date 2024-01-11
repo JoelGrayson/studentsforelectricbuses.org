@@ -4,7 +4,8 @@ secret/*
 /.next/
 /out/
 /build
-.DS_Store
+**/.DS_Store
 **/.env
 data
 TODO
+package-lock.json

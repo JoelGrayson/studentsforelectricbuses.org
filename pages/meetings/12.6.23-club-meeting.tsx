@@ -14,8 +14,9 @@ export default function Meeting() {
 		href="https://nyassembly.gov/mem/Jeffrey-Dinowitz"><u>page</u></a>).</p>
 		</blockquote></li>
 		<li><blockquote>
-		<p>Example bill:<img
-		src="/images/meetings/example-bill.png" /></p>
+		<p>Example bill:
+		<img src="/images/meetings/example-bill.png" alt='example bill' />
+		</p>
 		</blockquote></li>
 		</ul></li>
 		</ul>

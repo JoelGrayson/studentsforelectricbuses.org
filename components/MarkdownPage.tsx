@@ -13,7 +13,7 @@ export default function MarkdownPage({ filename }: { filename: string /* string 
             .then((res)=>res.text())
             .then((text)=>setMarkdown(text))
             .catch((err)=>console.error(err));
-    }, []);
+    }, [filename]);
 
     return <Page>
         <Markdown options={{
