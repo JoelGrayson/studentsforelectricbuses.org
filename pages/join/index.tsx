@@ -11,11 +11,12 @@ import React, { useState } from 'react';
 import Page from "../../components/PageContainer";
 import onFormSubmit from './onFormSubmit';
 import styles from '../../styles/form/form.module.css';
-import styled from "@emotion/styled";
 import Loader from '@/components/Loader';
+import { usePlausible } from "next-plausible";
 
 export default function Join() {
-    const [content, setContent]=useState<String>('form');
+    const [content, setContent]=useState<string>('form');
+    const plausible=usePlausible();
     
     return (<Page center>
         <style jsx>{`
@@ -28,7 +29,10 @@ export default function Join() {
         {
             content==='form'
             ?
-            (<form action='POST' target="/api/join-form/new" className={styles.form} onSubmit={onFormSubmit(setContent)}>
+            (<form action='POST' target="/api/join-form/new" className={styles.form} onSubmit={(e)=>{
+                plausible('joinFormSubmitted');
+                onFormSubmit(setContent)(e);
+            }}>
                 <div>
                     <label htmlFor='name'>Name</label>
                     <input type="text" name='name' id='name' placeholder="Your Name" />

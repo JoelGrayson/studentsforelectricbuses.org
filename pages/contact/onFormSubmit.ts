@@ -6,6 +6,8 @@ export default function onFormSubmit(setContacted: Function) {
         const email=e.target[1].value;
         const message=e.target[2].value;
     
+        setContacted('loading');
+        
         // Add to database
         fetch('/api/contact-form/new', {
             method: 'POST',

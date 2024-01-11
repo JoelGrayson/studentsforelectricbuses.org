@@ -25,8 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         text: `---New SEB Join Form Submission---\n${msg}`
     });
 
-    console.log('Creating DB instance');
-
     await prisma.join_form.create({
         data: {
             date_submitted: new Date(),
