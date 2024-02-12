@@ -38,6 +38,9 @@ export default function Record() {
             <figcaption>2022 Halloween</figcaption>
         </figure>
         
+        <h3>2021 Founded</h3>
+        <p>Students for Electric Buses started meeting in 2021.</p>
+        
         <h3>Sustainable Development Goals</h3>
         <figure>
             <Image src='/images/sdgs.jpg' alt='Sustainable Development Goals' width={500} height={375} />
