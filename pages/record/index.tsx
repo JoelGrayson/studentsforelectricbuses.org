@@ -51,7 +51,7 @@ export default function Record() {
 
 
 export function Row({ event, time, children }: { event: React.ReactNode; time: React.ReactNode; children: React.ReactNode }) {
-    return <div className='grid grid-rows-10 d:grid-cols-[2fr_3fr] items-center justify-center'>
+    return <div className='grid d:grid-cols-[2fr_3fr] items-center justify-center'>
         {/* Timeline Bar */}
         <div className='flex d:items-center m:justify-center m:mt-10'>
             <div className='bg-blue-800 d:h-96 d:w-2 m:w-fit m:h-fit'>
