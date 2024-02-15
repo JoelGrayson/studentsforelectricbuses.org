@@ -16,6 +16,7 @@ export default function StateOfTheEBus() {
             
             <h3>In California</h3>
             <p>California has been pushing ambitious incentives, including California Air Resources Board (CARB), California’s Hybrid and Zero-Emission Truck and Bus Voucher Incentive Program (HVIP), and California Energy Commission’s School Bus Replacement Program.</p>
+            <p></p>
         </main>
     </Page>;
 }

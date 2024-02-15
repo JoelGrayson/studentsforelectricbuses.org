@@ -24,6 +24,7 @@ export default function Header({title, children}: {title?: String, children?: an
                 <ul className='m:grid m:grid-cols-3 m:grid-rows-2 m:place-items-center'>
                     {/* w-full m:p-0 m:grid grid-cols-3 grid-rows-2 */}
                     <Li href="/">Home</Li>
+                    <Li href="/the-state-of-e-buses">The State of E-Buses</Li>
                     <Li href="/meetings" dropdown={meetingsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Meetings</Li>
                         {/* TODO: insert v down arrow for fast selecting */}
                     <Li href="/resolutions" dropdown={resolutionsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Resolutions</Li>
