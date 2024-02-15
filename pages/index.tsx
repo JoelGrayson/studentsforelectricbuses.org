@@ -3,6 +3,7 @@ import IdlingEngine from '../components/IdlingEngine';
 import styles from '../styles/home/home.module.css';
 import Link from 'next/link';
 import { P } from '@jcomponents/writing-components';
+import { Source } from './the-state-of-e-buses';
 
 export function Info({children}: {children: React.ReactNode}) {
     return <>
@@ -109,6 +110,17 @@ export default function Home() {
                 </ul>
             </section>
             */}
+
+            <h3>Allaying Concerns</h3>
+            <h4>1. The Cold</h4>
+            <p>A school district in Minnesota that transitioned to electric buses did not have issues during the winter. <Source>https://www.mprnews.org/story/2024/01/30/minnesota-schools-test-electric-busesfind-benefits-and-barriers</Source>.</p>
+            
+            <h4>2. Range</h4>
+            <p>While initially a concern, the technology has progressed. E-buses can now go 155 miles on a single charge <Source>https://stnonline.com/partner-updates/6-myths-about-electric-school-buses-debunked/</Source>. If buying the batteries for the capacity is too much, one can also start by transitioning the shorter routes first.</p>
+
+            <h4>3. Too Risky</h4>
+            <p>With services like Highland Fleet and the Mobility House, the risk of transitioning to e-buses can be taken out of the equation and covered by these companies.</p>
+
 
             <section>
                 <h2 className='text-center mb-6 mt-8' id='dont-forget-private-schools'>Don&apos;t Forget Private Schools!</h2>
