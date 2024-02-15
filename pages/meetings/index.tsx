@@ -4,7 +4,10 @@ import { list } from './list';
 import jdate from 'joeldate';
 
 export default function Meetings() {
-    return <Page>
+    return <Page seo={{
+        title: 'Meetings of Students for Electric Buses',
+        description: 'Meetings of Students for Electric Buses'
+    }}>
         <h1 className='text-center pb-8'>Meetings</h1>
         <MeetingsList />
     </Page>;

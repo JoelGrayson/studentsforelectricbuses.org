@@ -39,7 +39,11 @@ export default function Record() {
         </figure>
         
         <h3>2021 Founded</h3>
-        <p>Students for Electric Buses started meeting in 2021.</p>
+        <p>Students for Electric Buses started officially meeting in 2021.</p>
+
+
+        <h3>2020 Origins</h3>
+        <p>Students for Electric Buses began with preliminary conversations in 2020. We are happy to have lived out much of the modern history of electric buses.</p>
         
         <h3>Sustainable Development Goals</h3>
         <figure>

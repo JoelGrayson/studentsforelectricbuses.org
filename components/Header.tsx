@@ -24,7 +24,7 @@ export default function Header({title, children}: {title?: String, children?: an
                 <ul className='m:grid m:grid-cols-3 m:grid-rows-2 m:place-items-center'>
                     {/* w-full m:p-0 m:grid grid-cols-3 grid-rows-2 */}
                     <Li href="/">Home</Li>
-                    <Li href="/the-state-of-e-buses">The State of E-Buses</Li>
+                    <Li href="/the-state-of-e-buses" mHidden>The State of E-Buses</Li>
                     <Li href="/meetings" dropdown={meetingsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Meetings</Li>
                         {/* TODO: insert v down arrow for fast selecting */}
                     <Li href="/resolutions" dropdown={resolutionsList.map(e=>({ title: e.title, url: e.hyphenatedTitle }))}>Resolutions</Li>
@@ -32,7 +32,7 @@ export default function Header({title, children}: {title?: String, children?: an
                         {/* <button>v</button> */}
                     
                     <Li href="/record">Record</Li>
-                    <Li href="/members">Members</Li>
+                    <Li href="/members" mHidden>Members</Li>
                     <Li href="/join">Join</Li>
                     <Li href="/contact">Contact</Li>
                     
@@ -47,10 +47,10 @@ export default function Header({title, children}: {title?: String, children?: an
     </>;
 
     type titleUrlT={ title: string; url: string };
-    function Li({children, href, dropdown}: {children: any, href: string; dropdown?: titleUrlT[] }) {
+    function Li({children, href, dropdown, mHidden}: {children: any, href: string; dropdown?: titleUrlT[]; mHidden?: boolean; }) {
         const [open, setOpen]=useState(false);
 
-        return <div className='relative'>
+        return <div className={`relative ${mHidden ? 'm:hidden' : ''}`}>
             <Link href={href}>
                 <li style={{
                     marginRight: dropdown ? 0 : undefined,
@@ -83,7 +83,7 @@ export default function Header({title, children}: {title?: String, children?: an
             </> }
             { open && dropdown && <div className='absolute top-[2.3rem] left-0 w-[300px] m:w-[190px] m:mt-3'>
                 {dropdown.map((item, index)=>{
-                    return <div className='w-full bg-white hover:bg-gray-300 p-3' style={{
+                    return <div className={`w-full bg-white hover:bg-gray-300 p-3`} style={{
                         border: '1px solid black',
                         borderTopWidth: index===0 ? 1 : 0,
                     }} key={item.title}>

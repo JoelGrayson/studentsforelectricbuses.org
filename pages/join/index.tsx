@@ -18,7 +18,10 @@ export default function Join() {
     const [content, setContent]=useState<string>('form');
     const plausible=usePlausible();
     
-    return (<Page center>
+    return (<Page center seo={{
+        title: 'Join Students for Electric Buses',
+        description: 'Join Students for Electric Buses to help us advocate for electric school buses for private schools.'
+    }}>
         <style jsx>{`
             form div label {
                 display: inline-block;

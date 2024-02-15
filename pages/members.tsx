@@ -8,7 +8,9 @@ function m(name: string, joinYear='Unknown') { //member struct
 }
 
 export default function Members() {
-    return <Page center bottomPadding>
+    return <Page center bottomPadding seo={{
+        title: 'Members of Students for Electric Buses'
+    }}>
         <h2>Members</h2>
         <br/>
         <div className={styles.container}>
