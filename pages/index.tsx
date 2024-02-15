@@ -111,7 +111,7 @@ export default function Home() {
             </section>
             */}
 
-            <h3>Allaying Concerns</h3>
+            <h2 className='text-center'>Allaying Concerns</h2>
             <h4>1. The Cold</h4>
             <p>A school district in Minnesota that transitioned to electric buses did not have issues during the winter. <Source>https://www.mprnews.org/story/2024/01/30/minnesota-schools-test-electric-busesfind-benefits-and-barriers</Source>.</p>
             
