@@ -3,8 +3,11 @@ import styles from '../styles/home/home.module.css';
 import Link from 'next/link';
 
 export default function StateOfTheEBus() {
-    return <Page>
-        <main className={styles.main}>
+    return <Page bottomPadding seo={{
+        title: 'The State of E-Buses',
+        description: 'The state of electric buses in the United States, New York State, and California, including incentives, government targets, and news.'
+    }}>
+        <main className={`${styles.main} leading-8`}>
             <h1 className='text-center pb-8'>The State of the E-Bus</h1>
             <h3>In the United States</h3>
             <p>School buses emit 9 million metric tons of carbon dioxide into the atmosphere each year <Source>https://www.scientificamerican.com/article/teenagers-invention-saves-fuel-for-school-buses</Source>.</p>

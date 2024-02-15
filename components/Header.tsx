@@ -32,6 +32,7 @@ export default function Header({title, children}: {title?: String, children?: an
                         {/* <button>v</button> */}
                     
                     <Li href="/record">Record</Li>
+                    <Li href="/members">Members</Li>
                     <Li href="/join">Join</Li>
                     <Li href="/contact">Contact</Li>
                     

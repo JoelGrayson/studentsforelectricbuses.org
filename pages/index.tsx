@@ -13,12 +13,16 @@ export function Info({children}: {children: React.ReactNode}) {
 }
 
 export default function Home() {
-    return <Page bottomPadding>
+    return <Page bottomPadding seo={{
+        title: 'Students for Electric Buses',
+        description: 'We are a coalition of students working to transition private schools to electric buses. Without government incentives, private schools face a harder time transitioning, but we are here to make it happen',
+        keywords: ['electric buses', 'students', 'high school', 'private schools', 'clean air act', 'climate change', 'pollution', 'transportation', 'school buses']
+    }}>
         <main className={styles.main}>
             <section> {/* Title */}
                 <h1 className='text-center pb-8 m:text-[1.7rem]'>Students for Electric Buses</h1>
                 <p> {/* Who we are */}
-                    We are a coalition of students from four schools and counting to transition schools from diesel-guzzling (&gt;99% of current buses) to electric school buses. If you want to combat climate change as a student through clean infrastructure that will last long after you graduate, <Link href='/join'>join us</Link>.
+                    We are a coalition of students from four schools and counting working to transition private schools from diesel-guzzling (&gt;99% of current buses) to electric school buses. If you want to combat climate change as a student through clean infrastructure that will last long after you graduate, <Link href='/join'>join us</Link>.
                 </p>
             </section>
 
