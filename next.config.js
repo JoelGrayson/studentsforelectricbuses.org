@@ -5,7 +5,6 @@ const { withPlausibleProxy }=require('next-plausible');
 
 const nextConfig={
     reactStrictMode: true,
-    swcMinify: true,
     redirects: jredirects
 };
 
